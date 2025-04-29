@@ -14,7 +14,8 @@ logging.basicConfig(level=logging.DEBUG)
 # Create FastAPI app
 app = FastAPI(
     title=settings.PROJECT_NAME,
-    openapi_url=f"{settings.API_V1_STR}/openapi.json"
+    openapi_url=f"{settings.API_V1_STR}/openapi.json",
+    # Hide schemas from documentation
 )
 
 # Include API router

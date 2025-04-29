@@ -1,6 +1,6 @@
 fastapi==0.104.1
 uvicorn==0.24.0
-yfinance==0.2.31
+yfinance==0.2.36
 sqlalchemy==2.0.23
 pydantic==2.5.2
 pydantic-settings==2.1.0
@@ -9,3 +9,4 @@ aiohttp==3.9.1
 pytest==7.4.3
 pytest-asyncio==0.21.1
 httpx==0.25.2 
+selenium==4.11.0

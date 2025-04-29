@@ -15,6 +15,9 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4  
 
 volumes:
   financial_data: 

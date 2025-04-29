@@ -1,0 +1,98 @@
+2025-04-28 13:07:29,519 - INFO - Logging system initialized.
+2025-04-28 13:07:29,524 - INFO - Starting test: test_list_assets
+2025-04-28 13:07:29,532 - INFO - HTTP Request: GET http://testserver/api/v1/assets "HTTP/1.1 200 OK"
+2025-04-28 13:07:29,532 - INFO - Testing /assets endpoint
+2025-04-28 13:07:29,532 - INFO - Test /assets passed successfully
+2025-04-28 13:07:29,534 - INFO - Starting test: test_get_metrics_found
+2025-04-28 13:07:29,537 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x12c845af0>,), kwargs: {}
+2025-04-28 13:07:29,537 - INFO - Found symbol from frame: BTC-USD
+2025-04-28 13:07:29,538 - INFO - HTTP Request: GET http://testserver/api/v1/metrics/BTC-USD "HTTP/1.1 200 OK"
+2025-04-28 13:07:29,538 - INFO - Response: {'symbol': 'BTC-USD', 'latest_price': 150.0, 'change_percent_24h': 1.2, 'average_price_7d': 145.0, 'timestamp': '2025-04-28T13:07:29.533428'}
+2025-04-28 13:07:29,538 - INFO - Test /metrics/BTC-USD passed successfully
+2025-04-28 13:07:29,539 - INFO - Starting test: test_get_metrics_not_found
+2025-04-28 13:07:29,540 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x12c873eb0>,), kwargs: {}
+2025-04-28 13:07:29,540 - INFO - Found symbol from frame: TSLA
+2025-04-28 13:07:29,541 - INFO - HTTP Request: GET http://testserver/api/v1/metrics/TSLA "HTTP/1.1 404 Not Found"
+2025-04-28 13:07:29,541 - INFO - Response: <Response [404 Not Found]>
+2025-04-28 13:07:29,541 - INFO - Testing /metrics/TSLA endpoint
+2025-04-28 13:07:29,541 - INFO - Test /metrics/TSLA passed successfully
+2025-04-28 13:07:29,542 - INFO - Starting test: test_trigger_ingestion
+2025-04-28 13:07:29,542 - INFO - Patching ingest_assets function
+2025-04-28 13:07:32,744 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x12c893f10>,), kwargs: {}
+2025-04-28 13:07:32,745 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x12c838640>,), kwargs: {}
+2025-04-28 13:07:32,746 - INFO - HTTP Request: POST http://testserver/api/v1/ingest "HTTP/1.1 200 OK"
+2025-04-28 13:07:32,746 - INFO - Response: {'message': 'Data ingestion successful', 'assets_updated': 3}
+2025-04-28 13:07:32,746 - INFO - Testing /ingest endpoint
+2025-04-28 13:08:33,601 - INFO - Logging system initialized.
+2025-04-28 13:08:33,606 - INFO - Starting test: test_list_assets
+2025-04-28 13:08:33,613 - INFO - HTTP Request: GET http://testserver/api/v1/assets "HTTP/1.1 200 OK"
+2025-04-28 13:08:33,614 - INFO - Testing /assets endpoint
+2025-04-28 13:08:33,614 - INFO - Test /assets passed successfully
+2025-04-28 13:08:33,615 - INFO - Starting test: test_get_metrics_found
+2025-04-28 13:08:33,618 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x169b633d0>,), kwargs: {}
+2025-04-28 13:08:33,618 - INFO - Found symbol from frame: BTC-USD
+2025-04-28 13:08:33,619 - INFO - HTTP Request: GET http://testserver/api/v1/metrics/BTC-USD "HTTP/1.1 200 OK"
+2025-04-28 13:08:33,619 - INFO - Response: {'symbol': 'BTC-USD', 'latest_price': 150.0, 'change_percent_24h': 1.2, 'average_price_7d': 145.0, 'timestamp': '2025-04-28T13:08:33.614809'}
+2025-04-28 13:08:33,619 - INFO - Test /metrics/BTC-USD passed successfully
+2025-04-28 13:08:33,620 - INFO - Starting test: test_get_metrics_not_found
+2025-04-28 13:08:33,622 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x169b88e50>,), kwargs: {}
+2025-04-28 13:08:33,622 - INFO - Found symbol from frame: TSLA
+2025-04-28 13:08:33,622 - INFO - HTTP Request: GET http://testserver/api/v1/metrics/TSLA "HTTP/1.1 404 Not Found"
+2025-04-28 13:08:33,622 - INFO - Response: <Response [404 Not Found]>
+2025-04-28 13:08:33,622 - INFO - Testing /metrics/TSLA endpoint
+2025-04-28 13:08:33,622 - INFO - Test /metrics/TSLA passed successfully
+2025-04-28 13:08:33,623 - INFO - Starting test: test_trigger_ingestion
+2025-04-28 13:08:33,623 - INFO - Patching ingest_assets function
+2025-04-28 13:08:36,818 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x169ba7d00>,), kwargs: {}
+2025-04-28 13:08:36,819 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x16927c2b0>,), kwargs: {}
+2025-04-28 13:08:36,821 - INFO - HTTP Request: POST http://testserver/api/v1/ingest "HTTP/1.1 200 OK"
+2025-04-28 13:08:36,821 - INFO - Response: {'message': 'Data ingestion successful', 'assets_updated': 3}
+2025-04-28 13:08:36,822 - INFO - Testing /ingest endpoint
+2025-04-28 13:09:59,863 - INFO - Logging system initialized.
+2025-04-28 13:09:59,867 - INFO - Starting test: test_list_assets
+2025-04-28 13:09:59,875 - INFO - HTTP Request: GET http://testserver/api/v1/assets "HTTP/1.1 200 OK"
+2025-04-28 13:09:59,875 - INFO - Testing /assets endpoint
+2025-04-28 13:09:59,875 - INFO - Test /assets passed successfully
+2025-04-28 13:09:59,877 - INFO - Starting test: test_get_metrics_found
+2025-04-28 13:09:59,880 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x133948250>,), kwargs: {}
+2025-04-28 13:09:59,880 - INFO - Found symbol from frame: BTC-USD
+2025-04-28 13:09:59,881 - INFO - HTTP Request: GET http://testserver/api/v1/metrics/BTC-USD "HTTP/1.1 200 OK"
+2025-04-28 13:09:59,881 - INFO - Response: {'symbol': 'BTC-USD', 'latest_price': 150.0, 'change_percent_24h': 1.2, 'average_price_7d': 145.0, 'timestamp': '2025-04-28T13:09:59.876333'}
+2025-04-28 13:09:59,881 - INFO - Test /metrics/BTC-USD passed successfully
+2025-04-28 13:09:59,882 - INFO - Starting test: test_get_metrics_not_found
+2025-04-28 13:09:59,883 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x133964cd0>,), kwargs: {}
+2025-04-28 13:09:59,883 - INFO - Found symbol from frame: TSLA
+2025-04-28 13:09:59,883 - INFO - HTTP Request: GET http://testserver/api/v1/metrics/TSLA "HTTP/1.1 404 Not Found"
+2025-04-28 13:09:59,883 - INFO - Response: <Response [404 Not Found]>
+2025-04-28 13:09:59,883 - INFO - Testing /metrics/TSLA endpoint
+2025-04-28 13:09:59,884 - INFO - Test /metrics/TSLA passed successfully
+2025-04-28 13:09:59,884 - INFO - Starting test: test_trigger_ingestion
+2025-04-28 13:09:59,885 - INFO - Patching ingest_assets function and settings.DEFAULT_ASSETS
+2025-04-28 13:10:13,790 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x1339dceb0>,), kwargs: {}
+2025-04-28 13:10:13,791 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x11ffd4520>,), kwargs: {}
+2025-04-28 13:10:13,794 - INFO - HTTP Request: POST http://testserver/api/v1/ingest "HTTP/1.1 200 OK"
+2025-04-28 13:10:13,794 - INFO - Response: {'message': 'Data ingestion successful', 'assets_updated': 2}
+2025-04-28 13:10:13,794 - INFO - Testing /ingest endpoint
+2025-04-28 13:10:13,794 - INFO - Test /ingest passed successfully
+2025-04-28 14:04:07,868 - INFO - Logging system initialized.
+2025-04-28 14:04:07,873 - INFO - Starting test: test_trigger_ingestion
+2025-04-28 14:04:07,875 - INFO - Patching ingest_assets function and settings.DEFAULT_ASSETS
+2025-04-28 14:04:16,009 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x155605bb0>,), kwargs: {}
+2025-04-28 14:04:16,010 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x15560baf0>,), kwargs: {}
+2025-04-28 14:04:16,012 - INFO - HTTP Request: POST http://testserver/api/v1/ingest "HTTP/1.1 200 OK"
+2025-04-28 14:04:16,012 - INFO - Response: {'message': 'Data ingestion successful', 'assets_updated': 2}
+2025-04-28 14:04:16,012 - INFO - Testing /ingest endpoint
+2025-04-28 14:04:16,012 - INFO - Test /ingest passed successfully
+2025-04-28 14:04:16,012 - INFO - Starting test: test_get_metrics_found
+2025-04-28 14:04:16,016 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x155622490>,), kwargs: {}
+2025-04-28 14:04:16,016 - INFO - Found symbol from frame: BTC-USD
+2025-04-28 14:04:16,017 - INFO - HTTP Request: GET http://testserver/api/v1/metrics/BTC-USD "HTTP/1.1 200 OK"
+2025-04-28 14:04:16,017 - INFO - Response: {'symbol': 'BTC-USD', 'latest_price': 150.0, 'change_percent_24h': 1.2, 'average_price_7d': 145.0, 'timestamp': '2025-04-28T14:04:07.873126'}
+2025-04-28 14:04:16,017 - INFO - Test /metrics/BTC-USD passed successfully
+2025-04-28 14:04:16,017 - INFO - Starting test: test_get_metrics_not_found
+2025-04-28 14:04:16,019 - INFO - Mock filter called with args: (<sqlalchemy.sql.elements.BinaryExpression object at 0x15562f8e0>,), kwargs: {}
+2025-04-28 14:04:16,019 - INFO - Found symbol from frame: TSLA
+2025-04-28 14:04:16,019 - INFO - HTTP Request: GET http://testserver/api/v1/metrics/TSLA "HTTP/1.1 404 Not Found"
+2025-04-28 14:04:16,020 - INFO - Response: <Response [404 Not Found]>
+2025-04-28 14:04:16,020 - INFO - Testing /metrics/TSLA endpoint
+2025-04-28 14:04:16,020 - INFO - Test /metrics/TSLA passed successfully

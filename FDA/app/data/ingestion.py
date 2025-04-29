@@ -4,13 +4,23 @@ from typing import List, Dict
 import asyncio
 from app.models.asset import Asset
 from sqlalchemy.orm import Session
-
+import requests
+import random
+import time
 async def fetch_asset_data(symbol: str) -> Dict:
     """Fetch asset data from yfinance"""
     try:
-        ticker = yf.Ticker(symbol)
-        hist = ticker.history(period="7d")
-        
+        await asyncio.sleep(random.randint(1,3))
+        session = requests.Session()
+
+        session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+        })
+        ticker = yf.Ticker(symbol, session=session)
+        hist = ticker.history(period="7d", interval="1d")
+        time.sleep(3)
+        # hist = yf.download(["AAPL"], period="7d", interval="1d")
+        print(f"Fetched historical data for {symbol}: {hist}")
         if hist.empty:
             return None
         print(f"Fetched data for {symbol}: {hist}")    
@@ -32,11 +42,11 @@ async def fetch_asset_data(symbol: str) -> Dict:
 async def ingest_assets(db: Session, symbols: List[str]) -> List[Dict]:
     """Ingest data for multiple assets"""
     tasks = [fetch_asset_data(symbol) for symbol in symbols]
+    print(f"Fetching data for symbols: {symbols}")
+    print(f"Tasks: {tasks}")
     results = await asyncio.gather(*tasks)
     print(f"Results from yfinance: {results}")
     valid_results = [r for r in results if r is not None]
-    # check if sysmbol already exists in the database
-    #drop sysmbols that already exist in the database
     existing_symbols = {asset.symbol for asset in db.query(Asset).all()}
     for symbol in existing_symbols:
         db.query(Asset).filter(Asset.symbol == symbol).delete()

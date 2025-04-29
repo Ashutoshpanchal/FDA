@@ -18,4 +18,4 @@ COPY . .
 EXPOSE 4321
 
 # Command to run the application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "4321"] 
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "4321","--reload"] 
