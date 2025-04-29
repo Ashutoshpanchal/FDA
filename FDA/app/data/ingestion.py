@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 import requests
 import random
 import time
+
 async def fetch_asset_data(symbol: str) -> Dict:
     """Fetch asset data from yfinance"""
     try:

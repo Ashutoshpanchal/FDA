@@ -12,9 +12,8 @@ class Settings(BaseSettings):
     # Asset Settings
     DEFAULT_ASSETS: List[str] = ["BTC-USD", "ETH-USD", "TSLA"]
     
-    # GenAI Settings
-    SUMMARY_PROMPT: str = "Generate a concise summary of the current market trends based on the following data: {data}"
-    
+    OPENAI_API_KEY: str = ""
+   
     class Config:
         case_sensitive = True
 
