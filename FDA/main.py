@@ -67,4 +67,4 @@ if __name__ == "__main__":
     run_streamlit()
 
     # Run FastAPI (main thread)
-    run_fastapi()
+    run_fast()
