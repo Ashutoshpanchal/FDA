@@ -7,7 +7,7 @@ import pandas as pd
 
 
 
-API_BASE = "http://localhost:4321/api/v1"  # change to deployed URL if hosted
+API_BASE = "http://44.226.122.3:4321/api/v1"  # change to deployed URL if hosted
 
 # Set page config
 st.set_page_config(
