@@ -12,6 +12,10 @@ class Settings(BaseSettings):
     # Asset Settings
     DEFAULT_ASSETS: List[str] = ["BTC-USD", "ETH-USD", "TSLA"]
     
+    # AI Service Settings
+    GROQ_API_KEY: str = "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"
+    GROQ_MODEL_NAME: str = "llama3-70b-8192"
+   
     OPENAI_API_KEY: str = ""
    
     class Config:

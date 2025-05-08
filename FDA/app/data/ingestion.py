@@ -11,7 +11,8 @@ import time
 async def fetch_asset_data(symbol: str) -> Dict:
     """Fetch asset data from yfinance"""
     try:
-        await asyncio.sleep(random.randint(1,3))
+        # await asyncio.sleep(random.randint(1,3))
+        time.sleep(3)
         session = requests.Session()
 
         session.headers.update({
@@ -19,7 +20,7 @@ async def fetch_asset_data(symbol: str) -> Dict:
         })
         ticker = yf.Ticker(symbol, session=session)
         hist = ticker.history(period="7d", interval="1d")
-        time.sleep(3)
+        # time.sleep(3)
         # hist = yf.download(["AAPL"], period="7d", interval="1d")
         print(f"Fetched historical data for {symbol}: {hist}")
         if hist.empty:
@@ -49,9 +50,9 @@ async def ingest_assets(db: Session, symbols: List[str]) -> List[Dict]:
     print(f"Results from yfinance: {results}")
     valid_results = [r for r in results if r is not None]
     existing_symbols = {asset.symbol for asset in db.query(Asset).all()}
-    for symbol in existing_symbols:
-        db.query(Asset).filter(Asset.symbol == symbol).delete()
-        db.commit()
+    # for symbol in existing_symbols:
+    #     db.query(Asset).filter(Asset.symbol == symbol).delete()
+    #     db.commit()
     for result in valid_results:
         asset = Asset(**result)
         db.add(asset)
