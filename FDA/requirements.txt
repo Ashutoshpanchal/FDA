@@ -16,3 +16,4 @@ groq
 langchain
 langchain_groq
 streamlit
+plotly
